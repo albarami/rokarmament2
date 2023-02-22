@@ -1,0 +1,55 @@
+def get_modified_stats():
+    attack = float(input("Attack, الهجوم: "))
+    defense = float(input("Defense, الدفاع: "))
+    health = float(input("Health, الصحة: "))
+    all_damage = float(input("All Damage, الضرر الكلي: "))
+    skill_damage = float(input("Skill Damage, ضرر المهارة: "))
+    counter_attack = float(input("Counter Attack, الهجوم المضاد: "))
+    normal_attack = float(input("Normal Attack, هجوم عادي: "))
+
+    attack *= 1
+    defense *= 1.75
+    health *= 2
+    all_damage *= 3
+    skill_damage *= 2
+    counter_attack *=.6
+    normal_attack *=.2
+
+
+    return attack, defense, health, all_damage, skill_damage, counter_attack, normal_attack
+
+print("Enter stats for the first Aemament السلاح الاول:")
+attack1, defense1, health1, all_damage1, skill_damage1, counter_attack1, normal_attack1 = get_modified_stats()
+
+print("\nEnter stats for the second Armament السلاح الثاني:")
+attack2, defense2, health2, all_damage2, skill_damage2, counter_attack2, normal_attack2 = get_modified_stats()
+
+total1 = attack1 + defense1 + health1 + all_damage1 + skill_damage1 + counter_attack1 + normal_attack1
+total2 = attack2 + defense2 + health2 + all_damage2 + skill_damage2 + counter_attack2 + normal_attack2
+
+print("\nModified stats for the first Aemament السلاح الاول:")
+print(f"Attack: {attack1}")
+print(f"Defense: {defense1}")
+print(f"Health: {health1}")
+print(f"All damage: {all_damage1}")
+print(f"Skill damage: {skill_damage1}")
+print(f"Counter Attack: {counter_attack1}")
+print(f"Normal Attack: {normal_attack1}")
+print(f"Total: {total1}")
+
+print("\nModified stats for the second Armament السلاح الثاني:")
+print(f"Attack: {attack2}")
+print(f"Defense: {defense2}")
+print(f"Health: {health2}")
+print(f"All damage: {all_damage2}")
+print(f"Skill damage: {skill_damage2}")
+print(f"Counter Attack: {counter_attack2}")
+print(f"Normal Attack: {normal_attack2}")
+print(f"Total: {total2}")
+
+if total1 > total2:
+    print("\nThe First Armament is Stronger السلاح الاول اقوى!")
+elif total2 > total1:
+    print("\nThe Second Armament is Strongerالسلاح الثاني اقوى!")
+else:
+    print("\nBoth characters have the same strength! متساوين في القوة")
